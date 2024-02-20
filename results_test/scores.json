@@ -1,0 +1,186 @@
+[
+    {
+        "Question": 1,
+        "bleu": 0.08738423142317801,
+        "precision_bert": "0.9122678",
+        "recall_bert": "0.86929697",
+        "f1_score": "0.8902391",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 2,
+        "bleu": 0.6625790974097157,
+        "precision_bert": "0.93280756",
+        "recall_bert": "0.9436166",
+        "f1_score": "0.93808067",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 3,
+        "bleu": 0.29068166465335243,
+        "precision_bert": "0.92304534",
+        "recall_bert": "0.8907764",
+        "f1_score": "0.9058696",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 4,
+        "bleu": 0.2847898520377986,
+        "precision_bert": "0.91770256",
+        "recall_bert": "0.8776408",
+        "f1_score": "0.8972248",
+        "empty_score": 100.0
+    },
+    {
+        "Question": 5,
+        "bleu": 0.06894215335080371,
+        "precision_bert": "0.84548527",
+        "recall_bert": "0.809146",
+        "f1_score": "0.82683027",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 6,
+        "bleu": 0.18871357412050577,
+        "precision_bert": "0.86020863",
+        "recall_bert": "0.85615677",
+        "f1_score": "0.8579365",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 7,
+        "bleu": 0.09196410710573764,
+        "precision_bert": "0.8650208",
+        "recall_bert": "0.82412624",
+        "f1_score": "0.8439531",
+        "empty_score": 100.0
+    },
+    {
+        "Question": 8,
+        "bleu": 0.02415905033633453,
+        "precision_bert": "0.832677",
+        "recall_bert": "0.8148573",
+        "f1_score": "0.8233143",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 9,
+        "bleu": 0.08392200359498857,
+        "precision_bert": "0.89429677",
+        "recall_bert": "0.8166083",
+        "f1_score": "0.8536407",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 10,
+        "bleu": "No bleu",
+        "precision_bert": "No",
+        "recall_bert": "No",
+        "f1_score": "No",
+        "empty_score": 100.0
+    },
+    {
+        "Question": 11,
+        "bleu": 0.41308717479456425,
+        "precision_bert": "0.9528724",
+        "recall_bert": "0.9110855",
+        "f1_score": "0.93079805",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 12,
+        "bleu": 0.10210260158726359,
+        "precision_bert": "0.8849248",
+        "recall_bert": "0.8243901",
+        "f1_score": "0.85279393",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 13,
+        "bleu": 0.10670971288563899,
+        "precision_bert": "0.8600178",
+        "recall_bert": "0.8247558",
+        "f1_score": "0.84178066",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 14,
+        "bleu": 0.3516195682415352,
+        "precision_bert": "0.86429334",
+        "recall_bert": "0.8537598",
+        "f1_score": "0.8587371",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 15,
+        "bleu": 0.541548272724516,
+        "precision_bert": "0.9114461",
+        "recall_bert": "0.91007364",
+        "f1_score": "0.9105784",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 16,
+        "bleu": 0.3454330836954647,
+        "precision_bert": "0.88529634",
+        "recall_bert": "0.8620772",
+        "f1_score": "0.87314266",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 17,
+        "bleu": 0.34542180876078454,
+        "precision_bert": "0.9274037",
+        "recall_bert": "0.91013974",
+        "f1_score": "0.91866624",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 18,
+        "bleu": 0.18494806313437154,
+        "precision_bert": "0.87561584",
+        "recall_bert": "0.85703313",
+        "f1_score": "0.86617124",
+        "empty_score": "No empties"
+    },
+    {
+        "Question": 19,
+        "bleu": 0.23550261550769938,
+        "precision_bert": "0.90537673",
+        "recall_bert": "0.85880834",
+        "f1_score": "0.8814197",
+        "empty_score": 0.0
+    },
+    {
+        "Question": 20,
+        "bleu": 0.179729972602819,
+        "precision_bert": "0.8730044",
+        "recall_bert": "0.9527774",
+        "f1_score": "0.91114813",
+        "empty_score": 0.0
+    },
+    {
+        "Question": 21,
+        "bleu": 0.3034794588632723,
+        "precision_bert": "0.93612456",
+        "recall_bert": "0.88405824",
+        "f1_score": "0.90925246",
+        "empty_score": 100.0
+    },
+    {
+        "Question": 22,
+        "bleu": 0.20794928985063596,
+        "precision_bert": "0.8748178",
+        "recall_bert": "0.814444",
+        "f1_score": "0.8433567",
+        "empty_score": 0.0
+    },
+    {
+        "Question": 23,
+        "bleu": 0.301262606152573,
+        "precision_bert": "0.8445128",
+        "recall_bert": "0.85151255",
+        "f1_score": "0.8477632",
+        "empty_score": 100.0
+    }
+]
