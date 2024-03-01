@@ -65,11 +65,11 @@ def select_execution_mode():
     else:
         print("Predicting saved files.")
         # No context input
-        #txt_files_content, txt_files_names = read_txts()
-        #results = predict_all_files(txt_files_content, txt_files_names, questions, llm, qa_prompt)
+        txt_files_content, txt_files_names = read_txts()
+        results = predict_all_files(txt_files_content, txt_files_names, questions, llm, qa_prompt)
 
         # save results
-        #save_results(results, 'results/results.json')
+        save_results(results, 'results/results.json')
         print("Predictions done.\n ----- \n Evaluation starting.")
         with open('results/results.json', 'r') as file:
             results = json.load(file)
