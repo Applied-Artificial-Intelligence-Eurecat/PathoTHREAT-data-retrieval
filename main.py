@@ -28,11 +28,11 @@ def sort_key(filename):
 def read_txts():
     txt_files_content = []
 
-    files = os.listdir('data/test_text/')
+    files = os.listdir('data/text/')
     sorted_files = sorted(files, key=sort_key)
 
     for filename in sorted_files:
-        file_path = os.path.join('data/test_text/', filename)
+        file_path = os.path.join('data/text/', filename)
         # Open and read the content of the txt file
         with open(file_path, 'r') as file:
             content = file.read()
@@ -41,7 +41,7 @@ def read_txts():
     return txt_files_content, sorted_files
 
 def read_correct_answers():
-    with open('data/test_answers.json', 'r') as file:
+    with open('data/real_answers.json', 'r') as file:
         answers = json.load(file)
     return answers
 
@@ -65,19 +65,21 @@ def select_execution_mode():
     else:
         print("Predicting saved files.")
         # No context input
-        txt_files_content, txt_files_names = read_txts()
-        results = predict_all_files(txt_files_content, txt_files_names, questions, llm, qa_prompt)
+        #txt_files_content, txt_files_names = read_txts()
+        #results = predict_all_files(txt_files_content, txt_files_names, questions, llm, qa_prompt)
 
         # save results
-        save_results(results, 'results_test/results.json')
+        #save_results(results, 'results/results.json')
         print("Predictions done.\n ----- \n Evaluation starting.")
+        with open('results/results.json', 'r') as file:
+            results = json.load(file)
 
         #evaluate
         answers = read_correct_answers()
         scores = evaluate_registers(results, answers)
 
         # save scores
-        save_results(scores, 'results_test/scores.json')
+        save_results(scores, 'results/scores.json')
         print("Evaluation DONE")
 
 

@@ -20,14 +20,14 @@ def evaluate_bert(references, candidates):
 
 
 def evaluate_empty(references, candidates):
-    # Detected problems. The model instead of returning "" always returns Not specified (or specify), not provide, not mention.
+    # Detected problems. The model instead of returning "" always returns Not specified (or specify), not provide, not mention, not report.
     correct = sum(1 for a, b in zip(references, candidates) if a == "" and b == "")
     if len(references) == 0:
         return "No empties"
     return correct/len(references)*100
 
 def replace_not_specified_strings(input_string):
-    pattern = re.compile(r'not\s+(specified|specify|provide|mention)', re.IGNORECASE)
+    pattern = re.compile(r'not\s+(specified|specify|provide|mention|report)', re.IGNORECASE)
     if pattern.search(input_string):
         return ""
     return input_string
@@ -53,11 +53,6 @@ def evaluate_registers(predicted_answers, correct_answers):
     ]
     PREDICT FORMAT
     [
-    ["", "", "", ...],
-    ...
-    ]
-    BLEU TEST FORMAT
-    [  
     ["", "", "", ...],
     ...
     ]

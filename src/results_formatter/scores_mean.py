@@ -2,7 +2,7 @@ import json
 from statistics import mean
 
 # Given JSON data
-with open('../../results_test/scores.json', 'r') as file:
+with open('../../results/scores.json', 'r') as file:
     data = json.load(file)
 
 # Convert JSON values to floats where necessary

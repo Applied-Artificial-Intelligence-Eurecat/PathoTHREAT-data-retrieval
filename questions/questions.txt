@@ -4,7 +4,7 @@ Event Description: Can you provide a summary of the contamination event?
 In the text, what triggered the contamination event? Do not infer an answer.
 Contamination Source: What was identified as the origin of the contamination?
 Detection Method: How was the contamination event first discovered?
-Exposure: How many individuals were affected by the contaminant?
+Exposure: How many individuals were exposed to the contaminant? Don't say the illness count.
 Illness Count: What was the number of people who fell ill due to the event?
 Attack Rate: What is the ratio of individuals who became ill to those who were exposed?
 Fatality Count: How many fatalities were associated with the contamination event?
@@ -15,8 +15,8 @@ Investigation Details: Can you describe the detailed investigation or inspection
 Case Definition: What is the case definition used for the cohort study?
 Risk Factors: Which risk factors were identified during the investigation?
 Event Duration: Over what period did the contamination event span?
-Mitigation Steps: What immediate actions were taken to mitigate the effects of the contamination (e.g., boil water advisory, stopping water supply, chlorination)?
-Event Monitoring: What types of water analyses were performed during the monitoring phase?
+Mitigation Steps: What immediate actions were taken to mitigate the effects of the contamination?
+Event Monitoring: What types of water analyses methods were performed during the monitoring phase?
 Name the contaminants detected using water sampling analysis. Do not infer positive detections.
 What steps were taken to restore the system after some time passed? Only say those mentioned in the text.
 Prevention Measures: What measures have been implemented to prevent future contamination events?
