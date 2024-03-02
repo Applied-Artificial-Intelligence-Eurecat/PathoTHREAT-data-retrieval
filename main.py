@@ -74,7 +74,7 @@ def select_execution_mode():
         with open('results/results.json', 'r') as file:
             results = json.load(file)
 
-        #evaluate
+        # evaluate
         answers = read_correct_answers()
         scores = evaluate_registers(results, answers)
 
