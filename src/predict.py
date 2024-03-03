@@ -5,7 +5,7 @@
 '''
 import box
 import yaml
-from langchain import PromptTemplate
+from langchain.prompts import PromptTemplate
 from src.prompts import qa_template
 
 
