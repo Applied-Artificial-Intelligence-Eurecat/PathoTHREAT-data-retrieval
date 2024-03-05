@@ -69,9 +69,9 @@ def select_execution_mode():
         results = predict_all_files(txt_files_content, txt_files_names, questions, llm, qa_prompt)
 
         # save results
-        save_results(results, 'results/results.json')
+        save_results(results, 'results/results-'+cfg.MODEL+'.json')
         print("Predictions done.\n ----- \n Evaluation starting.")
-        with open('results/results.json', 'r') as file:
+        with open('results/results-'+cfg.MODEL+'.json', 'r') as file:
             results = json.load(file)
 
         # evaluate
@@ -79,7 +79,7 @@ def select_execution_mode():
         scores = evaluate_registers(results, answers)
 
         # save scores
-        save_results(scores, 'results/scores.json')
+        save_results(scores, 'results/scores-'+cfg.MODEL+'.json')
         print("Evaluation DONE")
 
 

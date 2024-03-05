@@ -26,6 +26,9 @@ def build_llm():
         n_batch=1024,
         n_ctx=cfg.CONTEXT_LENGTH,
         verbose=False,
+        use_mlock=True,
+        streaming=False,
+        seed=42
     )
 
     return llm
