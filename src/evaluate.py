@@ -2,9 +2,9 @@ from bert_score import score
 import re
 '''
 We want evaluate:
-- Context relevance with precision, recall, f1. BERT used for that.
-- When there should be no answer, does the LLM infer something from the context?
-- Use a human, boolean evaluation to evaluate correct extraction.
+- Coherence and cohesion with precision, recall, f1. BERT used for that.
+- Empty classifications.
+- Accuracy Score. Human bool classification. Is the answer right?
 '''
 
 
