@@ -1,10 +1,10 @@
 Time spent running only one document and 23 prompts.
 Llama2 7b chat Q4 CPU Mac M2 Pro hardware: 120s
 Llama2 7b chat Q4 GPU Mac M2 Pro hardware: 37s
-Llama2 7b Q8 CPU Mac M2 Pro hardware: 2204s
-Llama2 7b Q8 GPU Mac M2 Pro hardware: 853s
 Llama2 7b chat Q8 CPU Mac M2 Pro hardware: 177s
 Llama2 7b chat Q8 GPU Mac M2 Pro hardware: 58s
+Llama2 7b Q8 CPU Mac M2 Pro hardware: 2204s
+Llama2 7b Q8 GPU Mac M2 Pro hardware: 853s
 Mistral 7b it Q8 CPU Mac M2 Pro hardware: 351s
 Mistral 7b it Q8 GPU Mac M2 Pro hardware: 253s
 Gemma 2b it CPU Mac M2 Pro hardware: 114s
