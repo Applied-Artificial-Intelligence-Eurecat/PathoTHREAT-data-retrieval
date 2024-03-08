@@ -4,160 +4,183 @@
         "precision_bert": "0.8929352",
         "recall_bert": "0.86038804",
         "f1_score": "0.87614036",
-        "empty_score": 0.0
+        "empty_score": 0.0,
+        "voting_accuracy": 0.7391304347826086
     },
     {
         "Question": 2,
         "precision_bert": "0.89235836",
         "recall_bert": "0.88792974",
         "f1_score": "0.889614",
-        "empty_score": 0.0
+        "empty_score": 0.0,
+        "voting_accuracy": 0.786096256684492
     },
     {
         "Question": 3,
         "precision_bert": "0.89973825",
         "recall_bert": "0.86397976",
         "f1_score": "0.88093185",
-        "empty_score": 0.0
+        "empty_score": 0.0,
+        "voting_accuracy": 0.1443850267379679
     },
     {
         "Question": 4,
         "precision_bert": "0.8890863",
         "recall_bert": "0.88992745",
         "f1_score": "0.8891809",
-        "empty_score": 47.5
+        "empty_score": 47.5,
+        "voting_accuracy": 0.5740740740740741
     },
     {
         "Question": 5,
         "precision_bert": "0.873303",
         "recall_bert": "0.83822215",
         "f1_score": "0.8550855",
-        "empty_score": 6.666666666666667
+        "empty_score": 6.666666666666667,
+        "voting_accuracy": 0.6011560693641619
     },
     {
         "Question": 6,
         "precision_bert": "0.891641",
         "recall_bert": "0.8594953",
         "f1_score": "0.87490183",
-        "empty_score": 0.0
+        "empty_score": 0.0,
+        "voting_accuracy": 0.5328947368421053
     },
     {
         "Question": 7,
         "precision_bert": "0.83342785",
         "recall_bert": "0.81995994",
         "f1_score": "0.82637846",
-        "empty_score": 44.800000000000004
+        "empty_score": 44.800000000000004,
+        "voting_accuracy": 0.25396825396825395
     },
     {
         "Question": 8,
         "precision_bert": "0.8299864",
         "recall_bert": "0.8166133",
         "f1_score": "0.823051",
-        "empty_score": 6.666666666666667
+        "empty_score": 6.666666666666667,
+        "voting_accuracy": 0.6994219653179191
     },
     {
         "Question": 9,
         "precision_bert": "0.8777543",
         "recall_bert": "0.8300207",
         "f1_score": "0.85296726",
-        "empty_score": 48.31460674157304
+        "empty_score": 48.31460674157304,
+        "voting_accuracy": 0.7474747474747475
     },
     {
         "Question": 10,
         "precision_bert": "0.85681146",
         "recall_bert": "0.82079345",
         "f1_score": "0.83821017",
-        "empty_score": 80.2919708029197
+        "empty_score": 80.2919708029197,
+        "voting_accuracy": 0.5098039215686274
     },
     {
         "Question": 11,
         "precision_bert": "0.91394717",
         "recall_bert": "0.8747802",
         "f1_score": "0.89302534",
-        "empty_score": 22.22222222222222
+        "empty_score": 22.22222222222222,
+        "voting_accuracy": 0.5698324022346368
     },
     {
         "Question": 12,
         "precision_bert": "0.8846875",
         "recall_bert": "0.8590966",
         "f1_score": "0.87121505",
-        "empty_score": 14.285714285714285
+        "empty_score": 14.285714285714285,
+        "voting_accuracy": 0.7873563218390804
     },
     {
         "Question": 13,
         "precision_bert": "0.8715256",
         "recall_bert": "0.83496386",
         "f1_score": "0.85256857",
-        "empty_score": 0.0
+        "empty_score": 0.0,
+        "voting_accuracy": 0.26229508196721313
     },
     {
         "Question": 14,
         "precision_bert": "0.88690305",
         "recall_bert": "0.84157455",
         "f1_score": "0.8632174",
-        "empty_score": 5.555555555555555
+        "empty_score": 5.555555555555555,
+        "voting_accuracy": 0.13529411764705881
     },
     {
         "Question": 15,
         "precision_bert": "0.91395986",
         "recall_bert": "0.8819156",
         "f1_score": "0.89734507",
-        "empty_score": 6.896551724137931
+        "empty_score": 6.896551724137931,
+        "voting_accuracy": 0.6237623762376238
     },
     {
         "Question": 16,
         "precision_bert": "0.8971278",
         "recall_bert": "0.85552484",
         "f1_score": "0.87548655",
-        "empty_score": 5.813953488372093
+        "empty_score": 5.813953488372093,
+        "voting_accuracy": 0.3627450980392157
     },
     {
         "Question": 17,
         "precision_bert": "0.87855226",
         "recall_bert": "0.8576758",
         "f1_score": "0.8676255",
-        "empty_score": 47.72727272727273
+        "empty_score": 47.72727272727273,
+        "voting_accuracy": 0.6736111111111112
     },
     {
         "Question": 18,
         "precision_bert": "0.8935935",
         "recall_bert": "0.8500449",
         "f1_score": "0.87102467",
-        "empty_score": 4.615384615384616
+        "empty_score": 4.615384615384616,
+        "voting_accuracy": 0.5934959349593496
     },
     {
         "Question": 19,
         "precision_bert": "0.87705946",
         "recall_bert": "0.83479553",
         "f1_score": "0.8550377",
-        "empty_score": 21.21212121212121
+        "empty_score": 21.21212121212121,
+        "voting_accuracy": 0.3225806451612903
     },
     {
         "Question": 20,
         "precision_bert": "0.8686963",
         "recall_bert": "0.8652384",
         "f1_score": "0.8659826",
-        "empty_score": 3.9215686274509802
+        "empty_score": 3.9215686274509802,
+        "voting_accuracy": 0.35036496350364965
     },
     {
         "Question": 21,
         "precision_bert": "0.90361464",
         "recall_bert": "0.86230534",
         "f1_score": "0.88211805",
-        "empty_score": 0.7633587786259541
+        "empty_score": 0.7633587786259541,
+        "voting_accuracy": 0.5263157894736842
     },
     {
         "Question": 22,
         "precision_bert": "0.90049636",
         "recall_bert": "0.8586171",
         "f1_score": "0.878828",
-        "empty_score": 6.557377049180328
+        "empty_score": 6.557377049180328,
+        "voting_accuracy": 0.6060606060606061
     },
     {
         "Question": 23,
         "precision_bert": "0.8850176",
         "recall_bert": "0.85294867",
         "f1_score": "0.86814225",
-        "empty_score": 64.44444444444444
+        "empty_score": 64.44444444444444,
+        "voting_accuracy": 0.23469387755102042
     }
 ]

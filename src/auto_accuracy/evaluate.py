@@ -3,8 +3,6 @@ The objective of this script is to implement a
 Voting system that automatically evaluates the 
 accuracy between any results file and its correctly 
 labelled answers.
-===============================================
-Call this file from the project root.
 '''
 import json
 import box
@@ -24,17 +22,17 @@ files_ending_with_gguf = glob.glob('models/*gguf')
 with open('config/config.yml', 'r', encoding='utf8') as ymlfile:
     cfg = box.Box(yaml.safe_load(ymlfile))
 
+model = 'llama-2-7b-chat.Q4_0'
+
 # Prompt used by each model
 prompt="""
-I will provide two text strings below. 
-Please analyze them and determine if they convey the same contextual information. 
-It's important to consider their meanings, implications, and nuances rather than just the words used. 
+I will provide two text strings below. Do these two strings have the same contextual information?
 After your analysis, respond with 'Yes' if they share the same context, or 'No' if they do not.
 
 String 1: {candidate}
 String 2: {reference}
 
-Do these two strings have the same contextual information? Yes or No.
+Answer only 'yes' or 'no'.
 """
 
 # Carregar un a un model bucle for
@@ -42,40 +40,58 @@ def load_model(model_name):
     # Local Llamacpp model
     return LlamaCpp(
         model_path=model_name,
-        n_gpu_layers=cfg.GPU_LAYERS,
-        temperature=cfg.TEMPERATURE,
-        max_tokens=cfg.MAX_NEW_TOKENS,
+        n_gpu_layers=100,
+        temperature=0.01,
+        max_tokens=7,
         n_batch=1024,
-        n_ctx=cfg.CONTEXT_LENGTH,
+        n_ctx=4096,
         verbose=False,
         use_mlock=True,
         streaming=False,
         seed=42
     )
 
+
+def count_strings_with_yes_no(string_list):
+    # Initialize a counter for strings containing "yes" or "no"
+    ycount = 0
+    ncount = 0
+
+    # Iterate through each string in the list
+    for s in string_list:
+        # Check if "yes" or "no" is in the string (case-insensitive)
+        if "yes" in s.lower():
+            ycount += 1
+        else:
+            ncount += 1
+            
+    return 1 if ycount > ncount else 0
+
+
 def democracy(votes):
     # Transpose matrix
     transposed_matrix = [list(row) for row in zip(*votes)]
     
     # Count elements in each list of the transposed matrix
-    votes_count = [Counter(row) for row in transposed_matrix]
+    votes_count = [count_strings_with_yes_no(row) for row in transposed_matrix]
 
-    counts = []
-    # Display the counts for each list
-    for counter in votes_count:
-        counts.append(1 if counter['yes'] > counter['no'] else 0)
-
-    return counts
+    return votes_count
 
 def model_evaluation(references, candidates):
     votes = []
     # Extracting scores
     for model_name in files_ending_with_gguf:
         model_votes = []
+        with open('results/logs.txt', 'a') as file:
+            file.write('========\n')
+            file.write('Loading model: '+model_name)
         llm = load_model(model_name)
         # for each reference and candidate, predict
         for reference, candidate in zip(references, candidates):
-            model_votes.append(llm(prompt.format(candidate=candidate, reference=reference)))
+            vote = llm(prompt.format(candidate=candidate, reference=reference))
+            model_votes.append(vote)
+            with open('results/logs.txt', 'a') as file:
+                file.write('\nModel votes: '+ vote)
         del llm
         votes.append(model_votes)
     decisions = democracy(votes)
@@ -84,9 +100,8 @@ def model_evaluation(references, candidates):
     accuracy = total_correct / total_predictions
     return accuracy
 
-def evaluate():
+def evaluate(current_scores):
     # Llegir json de results i de data.
-    model = 'llama-2-7b-chat.Q4_0'
     with open('results/results-'+model+'.json', 'r') as file:
         predicted_answers = json.load(file)
     with open('data/real_answers.json', 'r') as file:
@@ -103,11 +118,19 @@ def evaluate():
                 references[z].append(predicted_answers[i]['responses'][z])
                 candidates[z].append(correct_answers[i]['answers'][z])
 
-    scoring = []
     for z in range(23):
         # Extracting scores
         accuracy = model_evaluation(references[z], candidates[z])
-        scoring.append({
-            'Question': z+1, # Question id being evaluated
-            'accuracy': accuracy
-        })
+        current_scores[z]['voting_accuracy'] = accuracy
+
+    return current_scores
+
+
+if __name__ == "__main__":
+    with open('results/scores-'+model+'.json', 'r') as file:
+        current_scores = json.load(file)
+    
+    scoring = evaluate(current_scores)
+    
+    with open('results/scores-'+model+'.json', 'w') as file:
+        json.dump(scoring, file, indent=4)
