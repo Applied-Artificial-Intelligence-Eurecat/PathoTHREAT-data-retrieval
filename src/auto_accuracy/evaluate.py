@@ -44,7 +44,7 @@ def load_model(model_name):
         temperature=0.01,
         max_tokens=7,
         n_batch=1024,
-        n_ctx=4096,
+        n_ctx=2500,
         verbose=False,
         use_mlock=True,
         streaming=False,
@@ -88,7 +88,8 @@ def model_evaluation(references, candidates):
         llm = load_model(model_name)
         # for each reference and candidate, predict
         for reference, candidate in zip(references, candidates):
-            vote = llm(prompt.format(candidate=candidate, reference=reference))
+            #Reducing string to approchimatelly <2000 tokens
+            vote = llm(prompt.format(candidate=candidate[:10000], reference=reference))
             model_votes.append(vote)
             with open('results/logs.txt', 'a') as file:
                 file.write('\nModel votes: '+ vote)
