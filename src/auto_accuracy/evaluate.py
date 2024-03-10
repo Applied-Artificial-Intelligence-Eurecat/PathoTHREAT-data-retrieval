@@ -32,8 +32,9 @@ After your analysis, respond with 'yes' if they share the same context, or 'no' 
 String 1: {candidate}
 String 2: {reference}
 
-Answer ONLY 'yes' or 'no'.
-Answer:
+Answer only yes or no. Further wording is useless.
+
+The answer is:
 """
 
 # Carregar un a un model bucle for
@@ -43,7 +44,7 @@ def load_model(model_name):
         model_path=model_name,
         n_gpu_layers=100,
         temperature=0.01,
-        max_tokens=10,
+        max_tokens=5,
         n_batch=1024,
         n_ctx=2500,
         verbose=False,
