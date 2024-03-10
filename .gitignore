@@ -20,6 +20,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+results/logs.txt
 eggs/
 .eggs/
 lib/
@@ -54,4 +55,5 @@ Llama-2-Open-Source-LLM-CPU-Inference/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+

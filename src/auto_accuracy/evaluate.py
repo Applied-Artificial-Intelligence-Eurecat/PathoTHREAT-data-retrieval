@@ -33,6 +33,7 @@ String 1: {candidate}
 String 2: {reference}
 
 Answer only 'yes' or 'no'.
+Answer:
 """
 
 # Carregar un a un model bucle for
