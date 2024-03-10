@@ -27,12 +27,12 @@ model = 'llama-2-7b-chat.Q4_0'
 # Prompt used by each model
 prompt="""
 I will provide two text strings below. Do these two strings have the same contextual information?
-After your analysis, respond with 'Yes' if they share the same context, or 'No' if they do not.
+After your analysis, respond with 'yes' if they share the same context, or 'no' if they do not.
 
 String 1: {candidate}
 String 2: {reference}
 
-Answer only 'yes' or 'no'.
+Answer ONLY 'yes' or 'no'.
 Answer:
 """
 
@@ -43,7 +43,7 @@ def load_model(model_name):
         model_path=model_name,
         n_gpu_layers=100,
         temperature=0.01,
-        max_tokens=7,
+        max_tokens=10,
         n_batch=1024,
         n_ctx=2500,
         verbose=False,
@@ -63,9 +63,9 @@ def count_strings_with_yes_no(string_list):
         # Check if "yes" or "no" is in the string (case-insensitive)
         if "yes" in s.lower():
             ycount += 1
-        else:
+        elif "no" in s.lower():
             ncount += 1
-            
+
     return 1 if ycount > ncount else 0
 
 
