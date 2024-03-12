@@ -22,7 +22,7 @@ files_ending_with_gguf = glob.glob('models/*gguf')
 with open('config/config.yml', 'r', encoding='utf8') as ymlfile:
     cfg = box.Box(yaml.safe_load(ymlfile))
 
-model = 'llama-2-7b-chat.Q4_0'
+model = 'mistral-7b-instruct-v0.2.Q8_0'
 
 # Prompt used by each model
 prompt="""
@@ -62,9 +62,9 @@ def count_strings_with_yes_no(string_list):
     # Iterate through each string in the list
     for s in string_list:
         # Check if "yes" or "no" is in the string (case-insensitive)
-        if "yes" in s.lower():
+        if "yes" in s.lower() and "no" not in s.lower():
             ycount += 1
-        elif "no" in s.lower():
+        elif "no" in s.lower() and "yes" not in s.lower():
             ncount += 1
 
     return 1 if ycount > ncount else 0
